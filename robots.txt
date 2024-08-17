@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sgyunc.com/sitemap.xml
+Sitemap: https://sgyunc.com/baidusitemap.xml
