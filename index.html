@@ -39,11 +39,7 @@
         <div id="seo-links" class="content-section">
             <h2>推荐阅读</h2>
             <p>探索我们最新的博客文章和项目，了解更多有关我们提供的服务和成功案例。</p>
-            <ul class="link-list">
-                <li><a href="https://blog.sgyunc.com/posts/39880.html">博客文章: 继承属于我们00后回忆的网站</a></li>
-                <li><a href="https://blog.sgyunc.com/posts/26258.html">博客文章: MiFlash常見报错解决方案</a></li>
-                <li><a href="https://blog.sgyunc.com/posts/51061.html">博客文章: 小米/红米手机解锁bl锁</a></li>
-            </ul>
+                <div id="content">数据库加载中...</div>
             <a href="https://blog.sgyunc.com" class="btn-read-more"> 更多文章</a>
         </div>
 
@@ -52,7 +48,7 @@
             <h2>我的项目</h2>
             <p>自己随便写的一些小项目</p>
             <div class="project-item">
-                <h3>上官云琛博客</h3>
+                <h3>博客</h3>
                 <p>分享生活,教程,趣事</p>
                 <a href="https://blog.sgyunc.com" class="btn-read-more">了解更多</a>
             </div>
@@ -88,12 +84,10 @@
         <!-- 新闻更新 -->
         <div id="news-updates" class="content-section">
             <h2>最新文章</h2>
-            <ul class="news-list">
-                <li><a href="https://blog.sgyunc.com/posts/39880.html">2024年8月7日 - 继承属于我们00后回忆的网站</a></li>
-                <li><a href="https://blog.sgyunc.com/posts/39735.html">2024年5月20日 - 永诺50mm f/1.8 STM镜头:我的人像摄影新伙伴</a></li>
-                <li><a href="https://blog.sgyunc.com/posts/8311.html">2024年5月10日 - 佳能EOS 70D:一次全新的摄影之旅</a></li>
+            <!-- <ul class="news-list"> -->
+                <div id="content">数据库加载中...</div>
                 <a href="https://blog.sgyunc.com" class="btn-read-more"> 更多文章</a>
-            </ul>
+            <!-- </ul> -->
         </div>
 
         <!-- 客户评价 -->
@@ -134,7 +128,22 @@
                 <li><strong>地址：</strong>北京市</li>
             </ul> -->
         </div>
-
+        <script>
+            function loadMarkdownFile(file) {
+                 fetch(file)
+                     .then(response => response.text())
+                     .then(markdown => {
+                         const markdownContent = document.getElementById('content');
+                         markdownContent.innerHTML = marked(markdown);
+                     })
+                     .catch(error => {
+                         console.error('Error loading Markdown file:', error);
+                     });
+             }
+             // Load a specific Markdown file
+             loadMarkdownFile('https://blog.sgyunc.com/newpost.md'); // Change the file path to your Markdown file
+       </script>
+       <script src="/marked.min.js"></script>
         <footer>
             <a href="https://www.foreverblog.cn/" target="_blank"> <img src="https://img.foreverblog.cn/logo_en_default.png" alt="" style="width:auto;height:16px;"> </a>
             <a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="120"></a>
