@@ -31,6 +31,7 @@
             <div class="overlay">
                 <h2>欢迎来到上官云琛的官网</h2>
                 <p>WWW.SGYUNC.COM</p>
+                  <div id="random-text" style="margin-top: -30px;"></div>
                 <a href="about.html" class="btn">了解更多</a>
             </div>
         </div>
@@ -145,7 +146,19 @@
              loadMarkdownFile('https://blog.sgyunc.com/newpost.md'); // Change the file path to your Markdown file
        </script>
        <script src="/marked.min.js"></script>
-       
+       <script>
+          // 使用JavaScript获取API数据
+          fetch('https://api.qjqq.cn/api/Yi?c=f&encode=text')
+              .then(response => response.text())
+              .then(data => {
+                  // 将API响应显示在页面上
+                  document.getElementById('random-text').innerText = data;
+              })
+              .catch(error => {
+                  console.error('获取API数据时出现错误：', error);
+              });
+        </script>
+        
         <footer>
             <a href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="https://img.foreverblog.cn/wormhole_1.gif" alt="" style="width:auto;height:32px;" title="穿梭虫洞-随机访问十年之约友链博客"></a>
             <a href="https://storeweb.cn/s/2205" target="_blank"><img src="https://upload.storeweb.cn/image/logo.png" style="width: 20px;height: 20px;"><span>个站商店</span></a>
