@@ -85,6 +85,7 @@ h4 {font-size: 10px;margin-bottom: 5px;}
 .project-item p{font-size:16px;margin-bottom:10px}
 .project-item .btn-read-more{color:#388e3c}
 .project-item .btn-read-more:hover{text-decoration:underline}
+.project-item img{width: 100%;}
 
 /* 图标容器样式 */
 .icon-con {padding: 0 19px;}
